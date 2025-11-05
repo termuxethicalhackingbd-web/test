@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Staro — Spin & Earn (Demo)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">⭐</div>
+      <div>
+        <div class="app-name">Staro Spin Zone</div>
+        <div class="tagline">Shine • Spin • Earn</div>
+      </div>
+    </div>
+    <div class="balance">
+      <div>⭐ <span id="starBal">-</span></div>
+      <div>🪙 <span id="tokenBal">-</span></div>
+      <div>🎟 <span id="freeLeft">-</span></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="left">
+      <div class="card spin-card">
+        <h2>Spin Wheel</h2>
+        <div class="wheel-wrap">
+          <div id="wheel" class="wheel">
+            <!-- simple wheel sectors (visual) -->
+            <div class="sector s1">⭐</div>
+            <div class="sector s2">🪙</div>
+            <div class="sector s3">🎨</div>
+            <div class="sector s4">🪙</div>
+            <div class="pin"></div>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button id="paidSpinBtn" class="btn primary">Paid Spin — 200 ⭐</button>
+          <button id="freeSpinBtn" class="btn">Free Spin (Daily)</button>
+        </div>
+        <div id="spinLog" class="muted">Spin history দেখাবে এখানে...</div>
+      </div>
+
+      <div class="card">
+        <h3>Boost Packs</h3>
+        <div class="boost-grid">
+          <div class="boost">
+            <strong>Starter</strong>
+            <div>×2 Mining</div>
+            <div class="muted">Price: Demo</div>
+            <button class="small" data-pack="2">Activate (demo)</button>
+          </div>
+          <div class="boost">
+            <strong>Pro</strong>
+            <div>×5 Mining</div>
+            <div class="muted">Price: Demo</div>
+            <button class="small" data-pack="5">Activate (demo)</button>
+          </div>
+          <div class="boost">
+            <strong>Elite</strong>
+            <div>×10 Mining</div>
+            <div class="muted">Price: Demo</div>
+            <button class="small" data-pack="10">Activate (demo)</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <aside class="right">
+      <div class="card">
+        <h3>Your NFTs</h3>
+        <div id="nftGrid" class="nft-grid">
+          <!-- demo NFTs will be injected -->
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Leaderboards</h3>
+        <div class="tabs">
+          <button class="tab active" data-tab="spins">Spins</button>
+          <button class="tab" data-tab="miners">Miners</button>
+          <button class="tab" data-tab="nfts">Collectors</button>
+        </div>
+        <div id="leaderboard" class="leaderboard">
+          <!-- populated by JS -->
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Refer & Earn</h3>
+        <div class="muted">Share your referral link:</div>
+        <input id="refLink" readonly value="https://staro.example/?ref=demoUser" />
+        <div class="muted small">20% Star commission on friend deposit (demo)</div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- result modal -->
+  <div id="resultModal" class="modal hidden">
+    <div class="modal-inner">
+      <h3 id="resultTitle">Result</h3>
+      <div id="resultBody"></div>
+      <div class="modal-actions">
+        <button id="closeResult" class="btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    Staro-MVP • Demo frontend — backend later
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
